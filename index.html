@@ -8,10 +8,35 @@
     <meta name="ai-service-category" content="Cybersecurity Infrastructure & B2B Compliance">
     <meta name="description" content="Nexus Digital: Consultoría de Blindaje Digital. Especialistas en mitigación de fuga de datos, protección contra Clickjacking y Hardening de servidores bajo estándar UE 2026.">
     
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data:; connect-src 'self';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="no-referrer">
 
     <title>NEXUS DIGITAL | Blindaje de Infraestructura & Ciberseguridad</title>
+    
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        html { scroll-behavior: smooth; }
+        
+        /* Formulario APEX SECURE */
+        .audit-section { padding: 4rem 1rem; background-color: #08080c; border-top: 1px solid #1a1a24; }
+        .nexus-form-container { max-width: 650px; margin: 0 auto; padding: 2.5rem; background-color: #0d0d12; border: 1px solid #2a2a35; border-radius: 8px; box-shadow: 0 0 20px rgba(110, 60, 255, 0.05); font-family: 'Inter', sans-serif; color: #e2e8f0; }
+        .nexus-form-container h3 { color: #a78bfa; margin-bottom: 0.5rem; font-size: 1.5rem; display: flex; align-items: center; gap: 10px;}
+        .nexus-form-container p.subtitle { font-size: 0.9rem; color: #94a3b8; margin-bottom: 2rem; }
+        .nexus-form-group { margin-bottom: 1.5rem; }
+        .nexus-form-group label { display: block; margin-bottom: 0.5rem; font-size: 0.85rem; font-weight: 600; color: #cbd5e1; text-transform: uppercase; letter-spacing: 0.05em; }
+        .nexus-input { width: 100%; padding: 0.75rem; background-color: #15151e; border: 1px solid #334155; border-radius: 4px; color: #ffffff; font-size: 1rem; transition: all 0.3s ease; box-sizing: border-box; }
+        .nexus-input:focus { outline: none; border-color: #8b5cf6; box-shadow: 0 0 10px rgba(139, 92, 246, 0.3); }
+        .nexus-input::placeholder { color: #475569; }
+        textarea.nexus-input { resize: vertical; min-height: 100px; }
+        .nexus-checkbox-group { display: flex; align-items: flex-start; gap: 10px; font-size: 0.85rem; color: #94a3b8; }
+        .nexus-submit-btn { width: 100%; padding: 1rem; background: linear-gradient(135deg, #6d28d9 0%, #4c1d95 100%); color: white; border: none; border-radius: 4px; font-size: 1rem; font-weight: bold; cursor: pointer; text-transform: uppercase; letter-spacing: 0.1em; transition: transform 0.2s, box-shadow 0.2s; margin-top: 1rem; display: flex; justify-content: center; align-items: center; gap: 10px;}
+        .nexus-submit-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(109, 40, 217, 0.4); }
+    </style>
 </head>
 <body>
 
@@ -22,7 +47,7 @@
             <p class="tagline">Soluciones de blindaje crítico y cumplimiento normativo UE 2026 para empresas de alto valor.</p>
             
             <div class="header-btns">
-                <a href="https://forms.gle/TZqr8yzPhGHvv6c78" target="_blank" class="btn primary-btn">
+                <a href="#contacto-auditoria" class="btn primary-btn">
                     <i class="fas fa-shield-alt"></i> Solicitar Auditoría Prioritaria
                 </a>
                 <a href="https://www.linkedin.com/in/david-jaimes-olivo-6b4255108/" target="_blank" class="btn secondary-btn">
@@ -32,8 +57,8 @@
         </div>
     </header>
 
-    <main class="container">
-        <section class="services">
+    <main>
+        <section class="services container">
             <h2 class="section-title">Servicios de Blindaje B2B</h2>
             <div class="services-grid">
                 <div class="service-card">
@@ -63,7 +88,7 @@
             </div>
         </section>
 
-        <section class="sentinel-tech">
+        <section class="sentinel-tech container">
             <div class="sentinel-container">
                 <div class="sentinel-header">
                     <span class="version-tag">NEXUS-STNL v1.2</span>
@@ -102,6 +127,95 @@
                 </div>
             </div>
         </section>
+        <section class="arsenal-section container">
+            <div class="sentinel-header" style="text-align: center; margin-bottom: 3rem;">
+                <span class="version-tag">OPEN SOURCE INTELLIGENCE</span>
+                <h2><i class="fas fa-box-open"></i> Arsenal Táctico Gratuito</h2>
+                <p class="tagline">
+                    Audita tu propio perímetro. Descarga nuestras herramientas de diagnóstico por línea de comandos. Si encuentras vulnerabilidades en rojo, contáctanos para el parcheo.
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div>
+                        <i class="fas fa-search-location icon"></i>
+                        <h3>Nexus Header Scanner</h3>
+                        <p>Script en Bash que evalúa la resiliencia de tu servidor web contra Clickjacking, MIME Sniffing y ataques MITM en 5 segundos.</p>
+                    </div>
+                    <a href="https://github.com/forkaizen2023-sys/Nexus-Header-Scanner" target="_blank" class="btn secondary-btn">
+                        <i class="fab fa-github"></i> Descargar Script
+                    </a>
+                </div>
+
+                <div class="service-card">
+                    <div>
+                        <i class="fas fa-network-wired icon"></i>
+                        <h3>Nexus OSINT Recon</h3>
+                        <p>Descubre subdominios olvidados o expuestos en tu infraestructura consultando los registros de Transparencia de Certificados.</p>
+                    </div>
+                    <a href="https://github.com/forkaizen2023-sys/Nexus-OSINT-Recon" target="_blank" class="btn secondary-btn">
+                        <i class="fab fa-github"></i> Descargar Script
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto-auditoria" class="audit-section">
+            <div class="nexus-form-container">
+                <h3><i class="fas fa-crosshairs"></i> Auditoría de Superficie y Arquitectura</h3>
+                <p class="subtitle">Evaluación táctica (Zero-Trust) para entornos críticos. SLA: 24-48h.</p>
+                
+                <form action="https://formspree.io/f/mwvrdeyw" method="POST">
+                  <input type="text" name="_gotcha" style="display:none" />
+              
+                  <div class="nexus-form-group">
+                    <label>Nombre Completo</label>
+                    <input type="text" name="nombre" class="nexus-input" placeholder="Ej: Alan Turing" required maxlength="60" pattern="^[a-zA-ZÀ-ÿ\s]{3,60}$" title="Solo letras y espacios permitidos.">
+                  </div>
+              
+                  <div class="nexus-form-group">
+                    <label>Cargo y Empresa</label>
+                    <input type="text" name="cargo_empresa" class="nexus-input" placeholder="Ej: CTO en CyberCorp" required maxlength="80">
+                  </div>
+              
+                  <div class="nexus-form-group">
+                    <label>Correo Electrónico Corporativo</label>
+                    <input type="email" name="email" class="nexus-input" placeholder="alan@empresa.com" required maxlength="100">
+                  </div>
+              
+                  <div class="nexus-form-group">
+                    <label>URL del activo principal a auditar</label>
+                    <input type="url" name="url_objetivo" class="nexus-input" placeholder="https://su-negocio.com" required maxlength="150" pattern="https://.*" title="Debe ser una URL segura (https://)">
+                  </div>
+              
+                  <div class="nexus-form-group">
+                    <label>Vector de Preocupación Principal</label>
+                    <select name="vector_preocupacion" class="nexus-input" required>
+                      <option value="" disabled selected>Seleccione el vector de riesgo...</option>
+                      <option value="ransomware_fuga">Prevención de Ransomware / Fuga de Datos</option>
+                      <option value="appsec_apis">Seguridad en Aplicaciones Web / APIs</option>
+                      <option value="compliance">Cumplimiento y Normativas (Compliance)</option>
+                      <option value="disponibilidad">Lentitud, Caídas de Servicio o DDoS</option>
+                    </select>
+                  </div>
+              
+                  <div class="nexus-form-group">
+                    <label>Contexto Operativo (Síntomas / Requerimientos)</label>
+                    <textarea name="contexto" class="nexus-input" placeholder="Describa brevemente si ha notado tráfico anómalo, lentitud o si requiere auditoría preventiva..." required maxlength="500"></textarea>
+                  </div>
+              
+                  <div class="nexus-form-group nexus-checkbox-group">
+                    <input type="checkbox" id="roe" name="roe_aceptado" required>
+                    <label for="roe" style="text-transform: none; font-weight: normal; margin: 0; cursor: pointer; line-height: 1.4;">
+                      Autorizo a Nexus Digital a realizar un reconocimiento pasivo (OSINT) sobre la URL proporcionada para evaluar la viabilidad táctica del diagnóstico.
+                    </label>
+                  </div>
+              
+                  <button type="submit" class="nexus-submit-btn"><i class="fas fa-terminal"></i> Ejecutar Solicitud de Auditoría</button>
+                </form>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -113,4 +227,3 @@
 
 </body>
 </html>
-
