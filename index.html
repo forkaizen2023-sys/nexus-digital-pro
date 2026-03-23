@@ -165,8 +165,8 @@
             <div class="nexus-form-container">
                 <h3><i class="fas fa-crosshairs"></i> Auditoría de Superficie y Arquitectura</h3>
                 <p class="subtitle">Evaluación táctica (Zero-Trust) para entornos críticos. SLA: 24-48h.</p>
-                
-                <form action="https://formspree.io/f/mwvrdeyw" method="POST">
+
+                <form action="https://formspree.io/f/mwvrdeyw" method="POST" id="nexus-contact-form">
                   <input type="text" name="_gotcha" style="display:none" />
               
                   <div class="nexus-form-group">
@@ -211,9 +211,53 @@
                       Autorizo a Nexus Digital a realizar un reconocimiento pasivo (OSINT) sobre la URL proporcionada para evaluar la viabilidad táctica del diagnóstico.
                     </label>
                   </div>
+
+                  <div class="nexus-form-group" style="background: rgba(167, 139, 250, 0.05); padding: 15px; border: 1px dashed #a78bfa; border-radius: 4px; margin-top: 20px;">
+                      <label style="color: #a78bfa;"><i class="fas fa-robot"></i> Verificación de Humanidad</label>
+                      <p style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 10px;">Para evitar ataques de denegación (DDoS) a nuestro sistema de tickets, resuelva la siguiente operación:</p>
+                      <div style="display: flex; gap: 10px; align-items: center;">
+                          <span id="captcha-question" style="font-family: 'Fira Code', monospace; font-size: 1.2rem; color: white;">¿Cuánto es 5 + 3?</span>
+                          <input type="number" id="captcha-answer" class="nexus-input" style="width: 80px; text-align: center;" required placeholder="=">
+                      </div>
+                      <span id="captcha-error" style="color: #ff5f56; font-size: 0.8rem; display: none; margin-top: 5px;">Error: Verificación fallida. Conexión rechazada.</span>
+                  </div>
               
-                  <button type="submit" class="nexus-submit-btn"><i class="fas fa-terminal"></i> Ejecutar Solicitud de Auditoría</button>
+                  <button type="button" id="nexus-submit-guard" class="nexus-submit-btn" onclick="validateCaptcha()"><i class="fas fa-terminal"></i> Autorizar Transmisión Segura</button>
                 </form>
+
+                <script>
+                    // Generador aleatorio de desafíos matemáticos simples
+                    let num1 = Math.floor(Math.random() * 10) + 1;
+                    let num2 = Math.floor(Math.random() * 10) + 1;
+                    let correctAnswer = num1 + num2;
+                    
+                    document.getElementById('captcha-question').innerText = `¿Cuánto es ${num1} + ${num2}?`;
+
+                    function validateCaptcha() {
+                        let userAnswer = parseInt(document.getElementById('captcha-answer').value);
+                        let errorMsg = document.getElementById('captcha-error');
+                        let form = document.getElementById('nexus-contact-form');
+
+                        if (userAnswer === correctAnswer) {
+                            // Si es correcto, permitimos que el formulario nativo (HTML5) verifique si faltan campos.
+                            if(form.reportValidity()) {
+                                errorMsg.style.display = 'none';
+                                form.submit(); // Envia a Formspree solo si todo es válido y el captcha es correcto
+                            }
+                        } else {
+                            // Bloqueamos el envío y mostramos alerta roja
+                            errorMsg.style.display = 'block';
+                            document.getElementById('captcha-answer').value = '';
+                            
+                            // Regeneramos el captcha para evitar fuerza bruta simple
+                            num1 = Math.floor(Math.random() * 10) + 1;
+                            num2 = Math.floor(Math.random() * 10) + 1;
+                            correctAnswer = num1 + num2;
+                            document.getElementById('captcha-question').innerText = `¿Cuánto es ${num1} + ${num2}?`;
+                        }
+                    }
+                </script>
+                
             </div>
         </section>
     </main>
