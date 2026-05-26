@@ -6,7 +6,6 @@
     <meta name="author" content="Nexus Digital | David Jaimes">
     <meta name="description" content="Nexus Digital: Cumplimiento NIS2 2026 + Tester de IA por Prompts (metodología propietaria única). Blindaje contra APIs y fugas de datos. Precios transparentes desde 297€/mes.">
     
-    <!-- BLINDAJE KERNEL-LEVEL -->
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data:; connect-src 'self' https://formspree.io;">
@@ -19,12 +18,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
+        
         body { font-family: 'Inter', sans-serif; }
         .title-font { font-family: 'Space Grotesk', sans-serif; }
         .glow-blue { text-shadow: 0 0 20px #00d4ff; }
         html { scroll-behavior: smooth; }
 
-        /* ESTILOS DEL FORMULARIO (intactos) */
+        /* ESTILOS DEL FORMULARIO (Mantenidos) */
         .audit-section { padding: 4rem 1rem; background-color: #08080c; border-top: 1px solid #1a1a24; }
         .nexus-form-container { max-width: 650px; margin: 0 auto; padding: 2.5rem; background-color: #0d0d12; border: 1px solid #2a2a35; border-radius: 8px; box-shadow: 0 0 20px rgba(110, 60, 255, 0.05); font-family: 'Inter', sans-serif; color: #e2e8f0; }
         .nexus-form-container h3 { color: #a78bfa; margin-bottom: 0.5rem; font-size: 1.5rem; display: flex; align-items: center; gap: 10px;}
@@ -38,29 +38,66 @@
         .nexus-checkbox-group { display: flex; align-items: flex-start; gap: 10px; font-size: 0.85rem; color: #94a3b8; }
         .nexus-submit-btn { width: 100%; padding: 1rem; background: linear-gradient(135deg, #6d28d9 0%, #4c1d95 100%); color: white; border: none; border-radius: 4px; font-size: 1rem; font-weight: bold; cursor: pointer; text-transform: uppercase; letter-spacing: 0.1em; transition: transform 0.2s, box-shadow 0.2s; margin-top: 1rem; display: flex; justify-content: center; align-items: center; gap: 10px;}
         .nexus-submit-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(109, 40, 217, 0.4); }
+
+        /* =========================================
+           NUEVO BLOQUE: ESTILOS FALTANTES 2026
+           ========================================= */
+           
+        /* SENTINEL SECTION */
+        .sentinel-container { background: #0a0a0f; border: 1px solid #00d4ff30; border-radius: 16px; padding: 3rem; }
+        .version-tag { background: rgba(0, 212, 255, 0.1); color: #00d4ff; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; font-family: monospace; border: 1px solid rgba(0, 212, 255, 0.3); display: inline-block; margin-bottom: 1rem; letter-spacing: 1px; }
+        .sentinel-header h2 { font-size: 2.2rem; font-weight: bold; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 10px; }
+        .sentinel-lead { font-size: 1.1rem; color: #94a3b8; margin-bottom: 2rem; line-height: 1.6; }
+        .sentinel-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem; }
+        .sentinel-list li { color: #cbd5e1; display: flex; gap: 10px; align-items: flex-start; }
+        .sentinel-list li i { color: #00d4ff; margin-top: 4px; }
+        
+        /* TERMINAL WINDOW UI */
+        .terminal-window { background: #050508; border: 1px solid #1a1a24; border-radius: 8px; overflow: hidden; font-family: monospace; box-shadow: 0 10px 30px rgba(0,212,255,0.05); }
+        .terminal-bar { background: #111; padding: 10px 15px; display: flex; gap: 8px; border-bottom: 1px solid #222; align-items: center; }
+        .dot { width: 12px; height: 12px; border-radius: 50%; }
+        .dot.red { background: #ff5f56; }
+        .dot.yellow { background: #ffbd2e; }
+        .dot.green { background: #27c93f; }
+        .terminal-bar .title { color: #666; font-size: 0.8rem; margin-left: auto; font-family: 'Inter', sans-serif; }
+        .terminal-body { padding: 1.5rem; color: #00ff9d; font-size: 0.9rem; line-height: 1.7; }
+        .terminal-body span { color: #00d4ff; margin-right: 8px; font-weight: bold; }
+        .terminal-body .line3 { color: #ff5f56; }
+        .terminal-body .line5 { color: #a78bfa; }
+        .cursor { display: inline-block; animation: blink 1s step-end infinite; }
+        @keyframes blink { 50% { opacity: 0; } }
+
+        /* ARSENAL SECTION */
+        .tagline { color: #94a3b8; font-size: 1.1rem; max-width: 600px; margin: 1rem auto 0; }
+        .service-card { background: #0d0d12; border: 1px solid #1a1a24; border-radius: 16px; padding: 2.5rem; transition: all 0.3s ease; display: flex; flex-direction: column; justify-content: space-between; height: 100%; }
+        .service-card:hover { border-color: #00d4ff; box-shadow: 0 10px 30px rgba(0, 212, 255, 0.05); transform: translateY(-5px); }
+        .service-card h3 { font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem; color: #fff; }
+        .service-card p { color: #94a3b8; line-height: 1.6; flex-grow: 1; }
+        .icon { font-size: 2.5rem; color: #00d4ff; margin-bottom: 1.5rem; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 1rem 1.5rem; border-radius: 8px; font-weight: bold; transition: all 0.3s; margin-top: 2rem; text-decoration: none; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.05em; }
+        .secondary-btn { background: transparent; border: 1px solid #00d4ff; color: #00d4ff; }
+        .secondary-btn:hover { background: #00d4ff; color: #000; box-shadow: 0 0 15px rgba(0,212,255,0.4); }
     </style>
 </head>
 <body class="bg-[#0a0a0f] text-white overflow-x-hidden">
 
-    <!-- NAVB -->
     <nav class="fixed top-0 z-50 w-full bg-[#0a0a0f]/95 backdrop-blur-lg border-b border-[#00d4ff]/30">
         <div class="max-w-screen-2xl mx-auto px-8 py-5 flex justify-between items-center">
             <h1 class="text-3xl font-bold title-font tracking-tighter">NEXUS<span class="text-[#00d4ff]">DIGITAL</span></h1>
             <div class="hidden md:flex gap-8 text-sm font-medium">
-                <a href="#nis2" class="hover:text-[#00d4ff]">NIS2 2026</a>
-                <a href="#servicios" class="hover:text-[#00d4ff]">Servicios</a>
-                <a href="#tester-ia" class="hover:text-[#00d4ff] font-bold">Tester IA Prompts</a>
-                <a href="#sentinel" class="hover:text-[#00d4ff]">Sentinel</a>
-                <a href="#arsenal" class="hover:text-[#00d4ff]">Arsenal Gratuito</a>
-                <a href="#contacto-auditoria" class="hover:text-[#00d4ff]">Auditoría</a>
+                <a href="#nis2" class="hover:text-[#00d4ff] transition">NIS2 2026</a>
+                <a href="#servicios" class="hover:text-[#00d4ff] transition">Servicios</a>
+                <a href="#tester-ia" class="hover:text-[#00d4ff] font-bold transition">Tester IA Prompts</a>
+                <a href="#sentinel" class="hover:text-[#00d4ff] transition">Sentinel</a>
+                <a href="#arsenal" class="hover:text-[#00d4ff] transition">Arsenal Gratuito</a>
+                <a href="#contacto-auditoria" class="hover:text-[#00d4ff] transition">Auditoría</a>
             </div>
-            <a href="#contacto-auditoria" class="bg-[#00d4ff] hover:bg-white hover:text-black px-6 py-3 rounded-2xl font-bold text-sm flex items-center gap-2 transition">
+            <a href="#contacto-auditoria" class="bg-[#00d4ff] text-black hover:bg-white hover:text-black px-6 py-3 rounded-2xl font-bold text-sm flex items-center gap-2 transition">
                 <i class="fas fa-shield-alt"></i> SOLICITAR AUDITORÍA 24H
             </a>
         </div>
     </nav>
 
-    <!-- HERO -->
     <section class="min-h-screen flex items-center pt-20 bg-gradient-to-br from-[#0a0a0f] via-[#001122] to-[#0a0a0f]">
         <div class="max-w-screen-2xl mx-auto px-8 grid md:grid-cols-2 gap-12 items-center">
             <div class="space-y-8">
@@ -71,20 +108,19 @@
                     ¿Quieres pagar<br>10 MILLONES € de multa<br>o blindarte HOY?
                 </h1>
                 <p class="text-2xl text-gray-300">Precios transparentes • Cumplimiento NIS2 • Tester de IA por Prompts propietario</p>
-                <a href="#contacto-auditoria" class="inline-block bg-[#00d4ff] hover:bg-white hover:text-black px-10 py-6 rounded-3xl text-2xl font-bold">SOLICITAR AUDITORÍA 24H →</a>
+                <a href="#contacto-auditoria" class="inline-block bg-[#00d4ff] text-black hover:bg-white px-10 py-6 rounded-3xl text-2xl font-bold transition">SOLICITAR AUDITORÍA 24H →</a>
             </div>
             <div class="hidden md:block bg-black/70 border border-[#00d4ff]/30 rounded-3xl p-8">
                 <div class="font-mono text-[#00ff9d] text-sm space-y-1">
                     <p>&gt; Nexus Sentinel v1.2 iniciado...</p>
                     <p>&gt; [ALERT] API mal configurada detectada</p>
                     <p>&gt; [CRÍTICO] NIS2 no compliant</p>
-                    <p class="text-[#00d4ff]">&gt; NODO BLINDADO • INTEGRIDAD ACTIVADA</p>
+                    <p class="text-[#00d4ff] mt-2 font-bold">&gt; NODO BLINDADO • INTEGRIDAD ACTIVADA</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- NIS2 -->
     <section id="nis2" class="py-20 bg-black/60">
         <div class="max-w-screen-2xl mx-auto px-8">
             <h2 class="text-4xl font-bold text-center mb-12">España 2026: NIS2 ya es ley</h2>
@@ -96,53 +132,51 @@
                 </div>
                 <div class="bg-[#001122] p-8 rounded-3xl border border-[#00d4ff]/30">
                     <h3 class="text-[#00d4ff] text-2xl font-bold">APIs mal configuradas</h3>
-                    <p class="text-xl">Vector #1 de brechas en España. Exposición de datos y autenticación rota.</p>
+                    <p class="text-xl mt-4">Vector #1 de brechas en España. Exposición de datos y autenticación rota.</p>
                 </div>
                 <div class="bg-[#001122] p-8 rounded-3xl border border-[#00d4ff]/30">
                     <h3 class="text-[#00d4ff] text-2xl font-bold">Tu riesgo actual</h3>
-                    <p class="text-gray-400">Si tienes +50 empleados o estás en sector crítico, la inspección puede llegar mañana.</p>
+                    <p class="text-gray-400 mt-4">Si tienes +50 empleados o estás en sector crítico, la inspección puede llegar mañana.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- TESTER IA POR PROMPTS -->
     <section id="tester-ia" class="py-20 bg-[#001122]">
         <div class="max-w-screen-2xl mx-auto px-8">
             <div class="text-center mb-12">
-                <span class="version-tag bg-[#00d4ff] text-black px-4 py-1 rounded-full">ÚNICO EN EL MERCADO</span>
-                <h2 class="text-4xl font-bold">Tester de IA por Prompts</h2>
-                <p class="text-xl text-gray-300 max-w-2xl mx-auto">Nuestra metodología propietaria Dynamic Fusion Engine 2060 verifica en minutos si tus sistemas IA son vulnerables.</p>
+                <span class="version-tag">ÚNICO EN EL MERCADO</span>
+                <h2 class="text-4xl font-bold mt-4">Tester de IA por Prompts</h2>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto mt-4">Nuestra metodología propietaria Dynamic Fusion Engine 2060 verifica en minutos si tus sistemas IA son vulnerables.</p>
             </div>
             <div class="bg-[#111] p-10 rounded-3xl border border-[#00d4ff]">
                 <div class="grid md:grid-cols-3 gap-8 text-center">
                     <div>
                         <i class="fas fa-robot text-5xl text-[#00d4ff] mb-6"></i>
                         <h3 class="text-2xl font-bold">Prompt Injection Testing</h3>
-                        <p class="text-gray-400">Simulamos ataques reales contra tus LLMs.</p>
+                        <p class="text-gray-400 mt-2">Simulamos ataques reales contra tus LLMs.</p>
                     </div>
                     <div>
                         <i class="fas fa-shield-alt text-5xl text-[#00d4ff] mb-6"></i>
-                        <h3 class="text-2xl font-bold">Jailbreak & Red Teaming Agentico</h3>
-                        <p class="text-gray-400">Fusión de 20+ expertos para encontrar fallos ocultos.</p>
+                        <h3 class="text-2xl font-bold">Jailbreak & Red Teaming</h3>
+                        <p class="text-gray-400 mt-2">Fusión de 20+ expertos para encontrar fallos ocultos.</p>
                     </div>
                     <div>
                         <i class="fas fa-chart-line text-5xl text-[#00d4ff] mb-6"></i>
-                        <h3 class="text-2xl font-bold">Reporte Ejecutivo + Remediación</h3>
-                        <p class="text-gray-400">SLA 24h con plan de hardening para tu IA.</p>
+                        <h3 class="text-2xl font-bold">Reporte Ejecutivo</h3>
+                        <p class="text-gray-400 mt-2">SLA 24h con plan de hardening para tu IA.</p>
                     </div>
                 </div>
-                <a href="#contacto-auditoria" class="block text-center mt-10 bg-[#00d4ff] text-black py-6 rounded-2xl font-bold text-xl">ACTIVAR TESTER DE IA POR PROMPTS</a>
+                <a href="#contacto-auditoria" class="block text-center mt-10 bg-[#00d4ff] text-black py-6 rounded-2xl font-bold text-xl transition hover:bg-white">ACTIVAR TESTER DE IA POR PROMPTS</a>
             </div>
         </div>
     </section>
 
-    <!-- SERVICIOS -->
     <section id="servicios" class="py-20 bg-black/60">
         <div class="max-w-screen-2xl mx-auto px-8">
             <h2 class="text-4xl font-bold text-center mb-12">Servicios de Blindaje B2B</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-[#111] p-8 rounded-3xl border border-[#00d4ff]/20 hover:border-[#00d4ff]">
+                <div class="bg-[#111] p-8 rounded-3xl border border-[#00d4ff]/20 hover:border-[#00d4ff] transition">
                     <i class="fas fa-fingerprint text-4xl text-[#00d4ff] mb-6"></i>
                     <h3 class="text-2xl font-bold">Audit Sentinel v1.2</h3>
                     <p class="text-6xl font-bold my-4">497€</p>
@@ -155,7 +189,7 @@
                     <p class="text-6xl font-bold my-4">297€ <span class="text-sm">/mes</span></p>
                     <p class="text-gray-400">Blindaje mensual continuo</p>
                 </div>
-                <div class="bg-[#111] p-8 rounded-3xl border border-[#00d4ff]/20 hover:border-[#00d4ff]">
+                <div class="bg-[#111] p-8 rounded-3xl border border-[#00d4ff]/20 hover:border-[#00d4ff] transition">
                     <i class="fas fa-satellite-dish text-4xl text-[#00d4ff] mb-6"></i>
                     <h3 class="text-2xl font-bold">Nexus Shield</h3>
                     <p class="text-6xl font-bold my-4">497€ <span class="text-sm">/mes</span></p>
@@ -171,15 +205,14 @@
         </div>
     </section>
 
-    <!-- SENTINEL TECH -->
     <section id="sentinel" class="py-20">
         <div class="max-w-screen-2xl mx-auto px-8">
             <div class="sentinel-container">
                 <div class="sentinel-header">
                     <span class="version-tag">NEXUS-STNL v1.2</span>
-                    <h2 style="border-bottom: none;"><i class="fas fa-terminal"></i> Nexus Sentinel Intelligence</h2>
+                    <h2><i class="fas fa-terminal text-[#00d4ff]"></i> Nexus Sentinel Intelligence</h2>
                 </div>
-                <div class="grid md:grid-cols-2 gap-12">
+                <div class="grid md:grid-cols-2 gap-12 mt-8">
                     <div class="sentinel-content">
                         <p class="sentinel-lead">Motor de auditoría propietario diseñado para la detección de vectores de ataque de día cero mediante ingeniería inversa.</p>
                         <ul class="sentinel-list">
@@ -210,12 +243,11 @@
         </div>
     </section>
 
-    <!-- ARSENAL TÁCTICO GRATUITO -->
     <section id="arsenal" class="arsenal-section py-20 bg-black/60">
         <div class="max-w-screen-2xl mx-auto px-8">
-            <div class="sentinel-header" style="text-align: center; margin-bottom: 3rem;">
+            <div class="sentinel-header text-center mb-12">
                 <span class="version-tag">OPEN SOURCE INTELLIGENCE</span>
-                <h2><i class="fas fa-box-open"></i> Arsenal Táctico Gratuito</h2>
+                <h2 class="justify-center"><i class="fas fa-box-open text-[#00d4ff]"></i> Arsenal Táctico Gratuito</h2>
                 <p class="tagline">Audita tu propio perímetro. Descarga nuestras herramientas de diagnóstico por línea de comandos.</p>
             </div>
             <div class="grid md:grid-cols-2 gap-8">
@@ -243,7 +275,6 @@
         </div>
     </section>
 
-    <!-- FORMULARIO ORIGINAL -->
     <section id="contacto-auditoria" class="audit-section">
         <div class="nexus-form-container">
             <h3><i class="fas fa-crosshairs"></i> Auditoría de Superficie y Arquitectura</h3>
@@ -289,7 +320,7 @@
                     <label style="color: #a78bfa;"><i class="fas fa-robot"></i> Verificación de Humanidad</label>
                     <p style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 10px;">Para evitar ataques de denegación, resuelva la siguiente operación:</p>
                     <div style="display: flex; gap: 10px; align-items: center;">
-                        <span id="captcha-question" style="font-family: 'Fira Code', monospace; font-size: 1.2rem; color: white;">¿Cuánto es 5 + 3?</span>
+                        <span id="captcha-question" style="font-family: monospace; font-size: 1.2rem; color: white;">¿Cuánto es 5 + 3?</span>
                         <input type="number" id="captcha-answer" class="nexus-input" style="width: 80px; text-align: center;" required placeholder="=">
                     </div>
                     <span id="captcha-error" style="color: #ff5f56; font-size: 0.8rem; display: none; margin-top: 5px;">Error: Verificación fallida.</span>
@@ -300,9 +331,9 @@
     </section>
 
     <footer class="py-12 border-t border-[#00d4ff]/10 text-center text-xs text-gray-500">
-        <div class="container">
+        <div class="container mx-auto">
             <p>&copy; 2026 NEXUS DIGITAL | Seguridad Garantizada por Diseño.</p>
-            <p class="status-code">STATUS: PROTECTED BY SENTINEL_ENGINE_V1.2 • Tester IA Prompts Propietario</p>
+            <p class="status-code font-mono mt-2 text-[#00d4ff]/50">STATUS: PROTECTED BY SENTINEL_ENGINE_V1.2 • Tester IA Prompts Propietario</p>
         </div>
     </footer>
 
