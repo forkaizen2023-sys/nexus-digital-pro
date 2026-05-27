@@ -4,42 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Nexus Digital | David Jaimes">
-    <meta name="description" content="Nexus Digital: Cumplimiento NIS2 2026 + Tester de IA por Prompts. Blindaje contra APIs y fugas de datos.">
+    <meta name="description" content="Nexus Digital: Cumplimiento NIS2 2026 + Tester de IA por Prompts (metodología propietaria única). Blindaje contra APIs y fugas de datos. Precios transparentes desde 297€/mes.">
     <title>NEXUS DIGITAL | Cumplimiento NIS2 y Tester de IA por Prompts</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
         :root { --blue: #00d4ff; }
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #0a0a0f;
-            color: #fff;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+        body { font-family: 'Inter', sans-serif; background: #0a0a0f; color: #fff; line-height: 1.6; overflow-x: hidden; }
         .title-font { font-family: 'Space Grotesk', sans-serif; }
         .glow { text-shadow: 0 0 25px var(--blue); }
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(10,10,15,0.95);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0,212,255,0.3);
-            z-index: 1000;
-        }
+        nav { position: fixed; top: 0; width: 100%; background: rgba(10,10,15,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,212,255,0.3); z-index: 1000; }
         .container { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
         .hero { min-height: 100vh; display: flex; align-items: center; background: linear-gradient(135deg, #0a0a0f, #001122); padding-top: 90px; }
         h1 { font-size: 3.8rem; line-height: 1.1; }
         .btn { background: #00d4ff; color: #000; padding: 18px 36px; border-radius: 9999px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; }
         .section { padding: 100px 0; }
-        .card { background: #111; border: 1px solid #00d4ff; border-radius: 16px; padding: 30px; }
+        .card { background: #111; border: 1px solid #00d4ff; border-radius: 16px; padding: 30px; transition: all 0.3s; }
+        .card:hover { transform: translateY(-8px); box-shadow: 0 0 30px rgba(0,212,255,0.3); }
         .terminal { background: #011627; border: 1px solid #00d4ff; border-radius: 8px; padding: 20px; font-family: monospace; color: #00ff9d; }
         .nexus-form-container { max-width: 650px; margin: 0 auto; padding: 40px; background: #0d0d12; border: 1px solid #2a2a35; border-radius: 16px; box-shadow: 0 0 30px rgba(139,92,246,0.15); }
         .nexus-input { width: 100%; padding: 14px; background: #15151e; border: 1px solid #334155; border-radius: 8px; color: #fff; font-size: 1rem; }
         .nexus-input:focus { border-color: #8b5cf6; box-shadow: 0 0 0 3px rgba(139,92,246,0.3); }
         .nexus-submit-btn { width: 100%; padding: 18px; background: linear-gradient(135deg, #6d28d9, #4c1d95); color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; }
+
+        /* RESPONSIVE PARA MÓVILES */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.6rem; }
+            .hero { padding-top: 70px; min-height: auto; }
+            nav .container { flex-wrap: wrap; padding: 15px 20px; gap: 15px; }
+            nav a { font-size: 0.95rem; }
+            .btn { padding: 14px 24px; font-size: 1rem; }
+            .section { padding: 70px 0; }
+            .card { padding: 20px; }
+        }
     </style>
 </head>
 <body>
@@ -236,215 +234,6 @@
                 document.getElementById('captcha-question').innerText = `¿Cuánto es ${num1} + ${num2}?`;
             }
         }
-    </script>
-</body>
-</html><!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Nexus Digital | David Jaimes">
-    <meta name="description" content="Nexus Digital: Cumplimiento NIS2 2026 + Tester de IA por Prompts. Blindaje contra APIs y fugas de datos.">
-    <title>NEXUS DIGITAL | Cumplimiento NIS2 y Tester de IA por Prompts</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
-        :root { --blue: #00d4ff; }
-        * { margin:0; padding:0; box-sizing:border-box; }
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #0a0a0f;
-            color: #fff;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        .title-font { font-family: 'Space Grotesk', sans-serif; }
-        .glow { text-shadow: 0 0 25px var(--blue); }
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(10,10,15,0.95);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0,212,255,0.3);
-            z-index: 1000;
-        }
-        .container { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(135deg, #0a0a0f, #001122);
-            padding-top: 90px;
-        }
-        h1 { font-size: 3.5rem; line-height: 1.1; }
-        .btn {
-            background: #00d4ff;
-            color: #000;
-            padding: 18px 36px;
-            border-radius: 9999px;
-            font-weight: 700;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .section { padding: 100px 0; }
-        .card {
-            background: #111;
-            border: 1px solid #00d4ff;
-            border-radius: 16px;
-            padding: 30px;
-        }
-        .terminal {
-            background: #011627;
-            border: 1px solid #00d4ff;
-            border-radius: 8px;
-            padding: 20px;
-            font-family: monospace;
-            color: #00ff9d;
-        }
-        .nexus-form-container {
-            max-width: 650px;
-            margin: 0 auto;
-            padding: 40px;
-            background: #0d0d12;
-            border: 1px solid #2a2a35;
-            border-radius: 16px;
-            box-shadow: 0 0 30px rgba(139,92,246,0.15);
-        }
-        .nexus-input {
-            width: 100%;
-            padding: 14px;
-            background: #15151e;
-            border: 1px solid #334155;
-            border-radius: 8px;
-            color: #fff;
-            font-size: 1rem;
-        }
-        .nexus-input:focus {
-            border-color: #8b5cf6;
-            box-shadow: 0 0 0 3px rgba(139,92,246,0.3);
-        }
-        .nexus-submit-btn {
-            width: 100%;
-            padding: 18px;
-            background: linear-gradient(135deg, #6d28d9, #4c1d95);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-    </style>
-</head>
-<body>
-
-    <!-- NAVBAR -->
-    <nav>
-        <div class="container" style="display:flex;justify-content:space-between;align-items:center;padding:20px 0;">
-            <h1 class="title-font" style="font-size:2.4rem;">NEXUS<span style="color:#00d4ff;">DIGITAL</span></h1>
-            <div style="display:flex;gap:25px;font-size:1.05rem;">
-                <a href="#nis2" style="color:#fff;text-decoration:none;">NIS2 2026</a>
-                <a href="#servicios" style="color:#fff;text-decoration:none;">Servicios</a>
-                <a href="#tester-ia" style="color:#fff;text-decoration:none;font-weight:700;">Tester IA Prompts</a>
-                <a href="#sentinel" style="color:#fff;text-decoration:none;">Sentinel</a>
-                <a href="#arsenal" style="color:#fff;text-decoration:none;">Arsenal Gratuito</a>
-                <a href="#contacto-auditoria" style="color:#fff;text-decoration:none;">Auditoría</a>
-            </div>
-            <a href="#contacto-auditoria" class="btn">SOLICITAR AUDITORÍA 24H</a>
-        </div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="hero">
-        <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;">
-            <div>
-                <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(0,212,255,0.1);color:#00d4ff;padding:8px 20px;border-radius:9999px;font-size:0.95rem;margin-bottom:20px;">
-                    ● NIS2 2026 + IA VULNERABLE
-                </div>
-                <h1 class="title-font glow" style="font-size:3.8rem;line-height:1.1;">¿Quieres pagar<br>10 MILLONES € de multa<br>o blindarte HOY?</h1>
-                <p style="font-size:1.4rem;color:#ccc;margin:30px 0;">Precios transparentes • Cumplimiento NIS2 • Tester de IA por Prompts propietario</p>
-                <a href="#contacto-auditoria" class="btn" style="font-size:1.3rem;padding:20px 40px;">SOLICITAR AUDITORÍA 24H →</a>
-            </div>
-            <div class="terminal" style="font-size:1.1rem;">
-                &gt; Nexus Sentinel v1.2 iniciado...<br>
-                &gt; [ALERT] API mal configurada detectada<br>
-                &gt; [CRÍTICO] NIS2 no compliant<br>
-                &gt; NODO BLINDADO • INTEGRIDAD ACTIVADA
-            </div>
-        </div>
-    </section>
-
-    <!-- NIS2 -->
-    <section id="nis2" class="section" style="background:#111;">
-        <div class="container">
-            <h2 style="text-align:center;font-size:2.5rem;margin-bottom:40px;">España 2026: NIS2 ya es ley</h2>
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;">
-                <div class="card"><h3 style="color:#00d4ff;">Multas reales</h3><p style="font-size:2.8rem;font-weight:bold;">10.000.000 €</p><p>o 2% de tu facturación global</p></div>
-                <div class="card"><h3 style="color:#00d4ff;">APIs mal configuradas</h3><p>Vector #1 de brechas en España</p></div>
-                <div class="card"><h3 style="color:#00d4ff;">Tu riesgo actual</h3><p>La inspección puede llegar mañana</p></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TESTER IA -->
-    <section id="tester-ia" class="section" style="background:#001122;">
-        <div class="container">
-            <div style="text-align:center;margin-bottom:50px;">
-                <span style="background:#00d4ff;color:#000;padding:8px 24px;border-radius:9999px;font-weight:700;">ÚNICO EN EL MERCADO</span>
-                <h2 style="font-size:2.6rem;margin:20px 0;">Tester de IA por Prompts</h2>
-            </div>
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px;">
-                <div class="card"><i class="fas fa-robot" style="font-size:3rem;color:#00d4ff;display:block;margin-bottom:15px;"></i><h3>Prompt Injection Testing</h3><p>Simulamos ataques reales contra tus LLMs.</p></div>
-                <div class="card"><i class="fas fa-shield-alt" style="font-size:3rem;color:#00d4ff;display:block;margin-bottom:15px;"></i><h3>Jailbreak & Red Teaming</h3><p>Fusión de 20+ expertos para encontrar fallos ocultos.</p></div>
-                <div class="card"><i class="fas fa-chart-line" style="font-size:3rem;color:#00d4ff;display:block;margin-bottom:15px;"></i><h3>Reporte Ejecutivo</h3><p>SLA 24h con plan de hardening para tu IA.</p></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SERVICIOS -->
-    <section id="servicios" class="section">
-        <div class="container">
-            <h2 style="text-align:center;font-size:2.5rem;margin-bottom:40px;">Servicios de Blindaje B2B</h2>
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;">
-                <div class="card"><i class="fas fa-fingerprint" style="font-size:2.5rem;color:#00d4ff;"></i><h3>Audit Sentinel v1.2</h3><p style="font-size:2rem;font-weight:bold;">497€</p><p>Una sola auditoría 24h</p></div>
-                <div class="card" style="border-color:#00d4ff;position:relative;"><div style="position:absolute;top:-12px;right:20px;background:#00d4ff;color:#000;padding:4px 14px;border-radius:9999px;font-size:0.8rem;font-weight:700;">MÁS POPULAR</div><i class="fas fa-vault" style="font-size:2.5rem;color:#00d4ff;"></i><h3>Hardening Pack</h3><p style="font-size:2rem;font-weight:bold;">297€ <span style="font-size:1rem;">/mes</span></p><p>Blindaje mensual continuo</p></div>
-                <div class="card"><i class="fas fa-satellite-dish" style="font-size:2.5rem;color:#00d4ff;"></i><h3>Nexus Shield</h3><p style="font-size:2rem;font-weight:bold;">497€ <span style="font-size:1rem;">/mes</span></p><p>Monitoreo proactivo</p></div>
-                <div class="card"><i class="fas fa-user-lock" style="font-size:2.5rem;color:#00d4ff;"></i><h3>Protocolo Zero-Trust</h3><p style="font-size:2rem;font-weight:bold;">997€ <span style="font-size:1rem;">/mes</span></p><p>Cabeceras avanzadas + IA</p></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FORMULARIO -->
-    <section id="contacto-auditoria" class="audit-section">
-        <div class="nexus-form-container">
-            <h3><i class="fas fa-crosshairs"></i> Auditoría de Superficie y Arquitectura</h3>
-            <p class="subtitle">Evaluación táctica (Zero-Trust) para entornos críticos. SLA: 24-48h.</p>
-            <form action="https://formspree.io/f/mwvrdeyw" method="POST" id="nexus-contact-form">
-                <input type="text" name="_gotcha" style="display:none" />
-                <!-- Aquí van todos los campos del formulario original que ya tenías. Los mantengo idénticos -->
-                <div style="margin-bottom:20px;">
-                    <label style="display:block;margin-bottom:6px;font-weight:600;">Nombre Completo</label>
-                    <input type="text" name="nombre" class="nexus-input" placeholder="Ej: Alan Turing" required>
-                </div>
-                <!-- ... (resto de campos igual que antes) ... -->
-                <button type="button" class="nexus-submit-btn" onclick="validateCaptcha()">Autorizar Transmisión Segura</button>
-            </form>
-        </div>
-    </section>
-
-    <footer style="text-align:center;padding:60px 20px;background:#0a0a0f;border-top:1px solid #00d4ff;">
-        <p>&copy; 2026 NEXUS DIGITAL | Seguridad Garantizada por Diseño.</p>
-        <p>STATUS: PROTECTED BY SENTINEL_ENGINE_V1.2 • Tester IA Prompts Propietario</p>
-    </footer>
-
-    <script>
-        let num1 = Math.floor(Math.random() * 10) + 1;
-        let num2 = Math.floor(Math.random() * 10) + 1;
-        let correctAnswer = num1 + num2;
-        // CAPTCHA completo aquí (igual que antes)
     </script>
 </body>
 </html>
