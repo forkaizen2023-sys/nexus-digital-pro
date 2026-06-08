@@ -150,76 +150,90 @@
         </div>
     </section>
 
-   <!-- FORMULARIO COMPLETO -->
-<section id="contacto-auditoria" class="section" style="background:#08080c;">
-    <div class="nexus-form-container">
-        <h3><i class="fas fa-crosshairs"></i> Auditoría de Superficie y Arquitectura</h3>
-        <p style="color:#94a3b8;margin-bottom:30px;">Evaluación táctica (Zero-Trust) para entornos críticos. SLA: 24-48h.</p>
-        
-        <form action="https://formspree.io/f/mwvrdeyw" method="POST" id="nexus-contact-form">
-
-            <!-- Campos ocultos de Formsubmit -->
-            <input type="hidden" name="_next" value="https://www.nexusdigital.pro/gracias.html">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_template" value="table">
-            <input type="text" name="_honey" style="display:none">
-
-            <div style="margin-bottom:20px;">
-                <label style="display:block;margin-bottom:6px;font-weight:600;">Nombre Completo</label>
-                <input type="text" name="nombre" class="nexus-input" placeholder="Ej: Alan Turing" required>
-            </div>
-
-            <div style="margin-bottom:20px;">
-                <label style="display:block;margin-bottom:6px;font-weight:600;">Cargo y Empresa</label>
-                <input type="text" name="cargo_empresa" class="nexus-input" placeholder="Ej: CTO en CyberCorp" required>
-            </div>
-
-            <div style="margin-bottom:20px;">
-                <label style="display:block;margin-bottom:6px;font-weight:600;">Correo Electrónico Corporativo</label>
-                <input type="email" name="email" class="nexus-input" placeholder="alan@empresa.com" required>
-            </div>
-
-            <div style="margin-bottom:20px;">
-                <label style="display:block;margin-bottom:6px;font-weight:600;">URL del activo principal a auditar</label>
-                <input type="url" name="url_objetivo" class="nexus-input" placeholder="https://su-negocio.com" required>
-            </div>
-
-            <div style="margin-bottom:20px;">
-                <label style="display:block;margin-bottom:6px;font-weight:600;">Vector de Preocupación Principal</label>
-                <select name="vector_preocupacion" class="nexus-input" required>
-                    <option value="" disabled selected>Seleccione el vector de riesgo...</option>
-                    <option value="ransomware_fuga">Prevención de Ransomware / Fuga de Datos</option>
-                    <option value="appsec_apis">Seguridad en Aplicaciones Web / APIs</option>
-                    <option value="compliance">Cumplimiento y Normativas (Compliance)</option>
-                    <option value="disponibilidad">Lentitud, Caídas de Servicio o DDoS</option>
-                    <option value="ia-prompts">Tester de IA por Prompts</option>
-                </select>
-            </div>
-
-            <div style="margin-bottom:20px;">
-                <label style="display:block;margin-bottom:6px;font-weight:600;">Contexto Operativo (Síntomas / Requerimientos)</label>
-                <textarea name="contexto" class="nexus-input" rows="4" placeholder="Describa brevemente si ha notado tráfico anómalo..." required></textarea>
-            </div>
-
-            <div style="margin-bottom:20px;display:flex;gap:10px;align-items:flex-start;">
-                <input type="checkbox" id="roe" name="roe_aceptado" required>
-                <label for="roe" style="font-size:0.9rem;">Autorizo a Nexus Digital a realizar un reconocimiento pasivo (OSINT) sobre la URL proporcionada.</label>
-            </div>
-
-            <!-- Verificación de Humanidad (Captcha) -->
-            <div style="background:rgba(167,139,250,0.05);padding:20px;border:1px dashed #a78bfa;border-radius:8px;margin-bottom:20px;">
-                <label style="color:#a78bfa;display:block;margin-bottom:8px;"><i class="fas fa-robot"></i> Verificación de Humanidad</label>
-                <p style="font-size:0.9rem;color:#94a3b8;margin-bottom:12px;">Para evitar ataques de denegación, resuelva la siguiente operación:</p>
-                <div style="display:flex;gap:15px;align-items:center;">
-                    <span id="captcha-question" style="font-size:1.3rem;font-family:monospace;color:#fff;">¿Cuánto es 5 + 3?</span>
-                    <input type="number" id="captcha-answer" class="nexus-input" style="width:100px;text-align:center;" required placeholder="Respuesta">
+  <!-- FORMULARIO COMPLETO -->
+    <section id="contacto-auditoria" class="section" style="background:#08080c;">
+        <div class="nexus-form-container">
+            <h3><i class="fas fa-crosshairs"></i> Auditoría de Superficie y Arquitectura</h3>
+            <p style="color:#94a3b8;margin-bottom:30px;">Evaluación táctica (Zero-Trust) para entornos críticos. SLA: 24-48h.</p>
+            <form action="https://formspree.io/f/mwvrdeyw" method="POST" id="nexus-contact-form">
+                <input type="text" name="_gotcha" style="display:none">
+                <div style="margin-bottom:20px;">
+                    <label style="display:block;margin-bottom:6px;font-weight:600;">Nombre Completo</label>
+                    <input type="text" name="nombre" class="nexus-input" placeholder="Ej: Alan Turing" required>
                 </div>
-                <span id="captcha-error" style="color:#ff5f56;font-size:0.85rem;display:none;margin-top:8px;">Error: Verificación fallida. Inténtalo de nuevo.</span>
-            </div>
+                <div style="margin-bottom:20px;">
+                    <label style="display:block;margin-bottom:6px;font-weight:600;">Cargo y Empresa</label>
+                    <input type="text" name="cargo_empresa" class="nexus-input" placeholder="Ej: CTO en CyberCorp" required>
+                </div>
+                <div style="margin-bottom:20px;">
+                    <label style="display:block;margin-bottom:6px;font-weight:600;">Correo Electrónico Corporativo</label>
+                    <input type="email" name="email" class="nexus-input" placeholder="alan@empresa.com" required>
+                </div>
+                <div style="margin-bottom:20px;">
+                    <label style="display:block;margin-bottom:6px;font-weight:600;">URL del activo principal a auditar</label>
+                    <input type="url" name="url_objetivo" class="nexus-input" placeholder="https://su-negocio.com" required>
+                </div>
+                <div style="margin-bottom:20px;">
+                    <label style="display:block;margin-bottom:6px;font-weight:600;">Vector de Preocupación Principal</label>
+                    <select name="vector_preocupacion" class="nexus-input" required>
+                        <option value="" disabled selected>Seleccione el vector de riesgo...</option>
+                        <option value="ransomware_fuga">Prevención de Ransomware / Fuga de Datos</option>
+                        <option value="appsec_apis">Seguridad en Aplicaciones Web / APIs</option>
+                        <option value="compliance">Cumplimiento y Normativas (Compliance)</option>
+                        <option value="disponibilidad">Lentitud, Caídas de Servicio o DDoS</option>
+                        <option value="ia-prompts">Tester de IA por Prompts</option>
+                    </select>
+                </div>
+                <div style="margin-bottom:20px;">
+                    <label style="display:block;margin-bottom:6px;font-weight:600;">Contexto Operativo (Síntomas / Requerimientos)</label>
+                    <textarea name="contexto" class="nexus-input" rows="4" placeholder="Describa brevemente si ha notado tráfico anómalo..." required></textarea>
+                </div>
+                <div style="margin-bottom:20px;display:flex;gap:10px;align-items:flex-start;">
+                    <input type="checkbox" id="roe" name="roe_aceptado" required>
+                    <label for="roe" style="font-size:0.9rem;">Autorizo a Nexus Digital a realizar un reconocimiento pasivo (OSINT) sobre la URL proporcionada.</label>
+                </div>
+                <div style="background:rgba(167,139,250,0.05);padding:20px;border:1px dashed #a78bfa;border-radius:8px;margin-bottom:20px;">
+                    <label style="color:#a78bfa;display:block;margin-bottom:8px;"><i class="fas fa-robot"></i> Verificación de Humanidad</label>
+                    <p style="font-size:0.9rem;color:#94a3b8;margin-bottom:12px;">Para evitar ataques de denegación, resuelva la siguiente operación:</p>
+                    <div style="display:flex;gap:15px;align-items:center;">
+                        <span id="captcha-question" style="font-size:1.3rem;font-family:monospace;color:#fff;">¿Cuánto es 5 + 3?</span>
+                        <input type="number" id="captcha-answer" class="nexus-input" style="width:100px;text-align:center;" required placeholder="Respuesta">
+                    </div>
+                    <span id="captcha-error" style="color:#ff5f56;font-size:0.85rem;display:none;margin-top:8px;">Error: Verificación fallida. Inténtalo de nuevo.</span>
+                </div>
+                <button type="button" class="nexus-submit-btn" onclick="validateCaptcha()">Autorizar Transmisión Segura <i class="fas fa-terminal"></i></button>
+            </form>
+        </div>
+    </section>
 
-            <button type="submit" class="nexus-submit-btn"> Enviar (Prueba directa)</button>
-                Autorizar Transmisión Segura <i class="fas fa-terminal"></i>
-            </button>
-        </form>
-    </div>
-</section>
+    <footer style="text-align:center;padding:60px 20px;background:#0a0a0f;border-top:1px solid #00d4ff;">
+        <p>&copy; 2026 NEXUS DIGITAL | Seguridad Garantizada por Diseño.</p>
+        <p>STATUS: PROTECTED BY SENTINEL_ENGINE_V1.2 • Tester IA Prompts Propietario</p>
+    </footer>
+
+    <script>
+        let num1 = Math.floor(Math.random() * 10) + 1;
+        let num2 = Math.floor(Math.random() * 10) + 1;
+        let correctAnswer = num1 + num2;
+        document.getElementById('captcha-question').innerText = `¿Cuánto es ${num1} + ${num2}?`;
+        function validateCaptcha() {
+            let userAnswer = parseInt(document.getElementById('captcha-answer').value);
+            let errorMsg = document.getElementById('captcha-error');
+            let form = document.getElementById('nexus-contact-form');
+            if (userAnswer === correctAnswer) {
+                if (form.reportValidity()) {
+                    errorMsg.style.display = 'none';
+                    form.submit();
+                }
+            } else {
+                errorMsg.style.display = 'block';
+                document.getElementById('captcha-answer').value = '';
+                num1 = Math.floor(Math.random() * 10) + 1;
+                num2 = Math.floor(Math.random() * 10) + 1;
+                correctAnswer = num1 + num2;
+                document.getElementById('captcha-question').innerText = `¿Cuánto es ${num1} + ${num2}?`;
+            }
+        }
+    </script>
+</body>
+</html>
