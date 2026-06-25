@@ -3,368 +3,278 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXUS DIGITAL | Blindaje de Infraestructura & Ciberseguridad</title>
     
-    <!-- CSP FUERTE -->
-    <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self';
-        script-src 'self' 'unsafe-inline' https://formspree.io;
-        style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com;
-        font-src 'self' https://cdnjs.cloudflare.com;
-        img-src 'self' data:;
-        connect-src 'self' https://formspree.io;
-        frame-ancestors 'self';
-        form-action 'self' https://formspree.io;
-    ">
+    <!-- SEO -->
+    <title>Automatizaciones para Clínicas | Reduce tareas manuales con Python + IA</title>
+    <meta name="description" content="Automatizamos procesos en clínicas y centros médicos combinando Python e Inteligencia Artificial. Reduce tareas manuales, evita pérdida de pacientes y crea sistemas estables y fáciles de mantener.">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Automatizaciones Inteligentes para Clínicas y Centros Médicos">
+    <meta property="og:description" content="Creamos automatizaciones con Python + IA que reducen tareas manuales y mejoran la atención al paciente. Sistemas estables y fáciles de mantener.">
+    <meta property="og:image" content="https://www.nexusdigital.pro/og-image.jpg">
+    <meta property="og:url" content="https://www.nexusdigital.pro/">
+    <meta property="og:type" content="website">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
-        
-        :root {
-            --accent: #6366f1;
-            --bg: #0a0a0f;
-            --card: #111118;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg);
-            color: #e2e8f0;
-            line-height: 1.7;
-        }
-        .title-font { font-family: 'Space Grotesk', sans-serif; }
-        
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(10,10,15,0.95);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(99,102,241,0.3);
-            z-index: 1000;
-        }
-        
-        .container { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
-        
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(135deg, #0a0a0f, #0f0f1a);
-            padding-top: 90px;
-        }
-        
-        h1 { font-size: 3.5rem; line-height: 1.1; }
-        
-        .btn {
-            background: var(--accent);
-            color: white;
-            padding: 18px 36px;
-            border-radius: 9999px;
-            font-weight: 700;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            transition: all 0.3s ease;
-        }
-        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(99,102,241,0.4); }
-        
-        .section { padding: 100px 0; }
-        
-        .card {
-            background: var(--card);
-            border: 1px solid #1f1f2e;
-            border-radius: 16px;
-            padding: 30px;
-            transition: all 0.3s ease;
-        }
-        .card:hover { border-color: var(--accent); transform: translateY(-8px); }
-        
-        .terminal {
-            background: #011627;
-            border: 1px solid #334155;
-            border-radius: 8px;
-            padding: 20px;
-            font-family: monospace;
-            color: #a5b4fc;
-        }
-        
-        .form-input {
-            width: 100%;
-            padding: 14px;
-            background: #15151e;
-            border: 1px solid #334155;
-            border-radius: 8px;
-            color: #fff;
-            font-size: 1rem;
-            margin-bottom: 18px;
-        }
-        .form-input:focus {
-            border-color: var(--accent);
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(99,102,241,0.2);
-        }
-        
-        @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            .hero { padding-top: 70px; min-height: auto; }
-            .section { padding: 70px 0; }
-        }
+        body { background-color: #0A0A0A; color: #EAEAEA; }
+        .accent { color: #00D4FF; }
+        .section-title { font-size: 2.25rem; line-height: 2.5rem; font-weight: 700; }
+        .card { background-color: #161616; transition: all 0.3s ease; }
+        .card:hover { transform: translateY(-5px); }
     </style>
 </head>
-<body>
+<body class="font-sans">
 
     <!-- NAVBAR -->
-    <nav>
-        <div class="container" style="display:flex;justify-content:space-between;align-items:center;padding:20px 0;">
-            <h1 class="title-font" style="font-size:2.4rem;">NEXUS<span style="color:#6366f1;">DIGITAL</span></h1>
-            <div style="display:flex;gap:25px;font-size:1.05rem;">
-                <a href="#nis2" style="color:#e2e8f0;text-decoration:none;">NIS2 2026</a>
-                <a href="#servicios" style="color:#e2e8f0;text-decoration:none;">Servicios</a>
-                <a href="#tester-ia" style="color:#e2e8f0;text-decoration:none;font-weight:700;">Tester IA Prompts</a>
-                <a href="#sentinel" style="color:#e2e8f0;text-decoration:none;">Sentinel</a>
-                <a href="#arsenal" style="color:#e2e8f0;text-decoration:none;">Arsenal Gratuito</a>
-                <a href="#contacto" style="color:#e2e8f0;text-decoration:none;">Contacto</a>
+    <nav class="bg-[#0A0A0A] border-b border-gray-800 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-x-3">
+                <div class="w-9 h-9 bg-[#00D4FF] rounded-lg flex items-center justify-center">
+                    <span class="text-[#0A0A0A] font-bold text-2xl">N</span>
+                </div>
+                <span class="text-2xl font-semibold tracking-tight">Nexus Digital</span>
             </div>
-            <a href="#contacto" class="btn">Solicitar Auditoría</a>
+            
+            <div class="hidden md:flex items-center gap-x-8 text-sm">
+                <a href="#solucion" class="hover:text-[#00D4FF] transition-colors">Solución</a>
+                <a href="#como-funciona" class="hover:text-[#00D4FF] transition-colors">Cómo funciona</a>
+                <a href="#paquetes" class="hover:text-[#00D4FF] transition-colors">Paquetes</a>
+            </div>
+
+            <a href="#contacto" class="px-5 py-2.5 bg-[#00D4FF] text-[#0A0A0A] font-semibold rounded-lg text-sm hover:bg-white transition-colors">
+                Reservar llamada
+            </a>
         </div>
     </nav>
 
     <!-- HERO -->
-    <section class="hero">
-        <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;">
-            <div>
-                <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(99,102,241,0.1);color:#6366f1;padding:8px 20px;border-radius:9999px;font-size:0.95rem;margin-bottom:20px;">
-                    NIS2 2026 • Protección de IA
-                </div>
-                <h1 class="title-font" style="color:#fff;">Blindaje técnico serio<br>para empresas que no<br>se pueden permitir fallos</h1>
-                <p style="font-size:1.35rem;color:#94a3b8;margin:30px 0 40px;">
-                    Auditorías avanzadas, cumplimiento normativo y protección de sistemas de inteligencia artificial.
-                </p>
-                <a href="#contacto" class="btn" style="font-size:1.2rem;padding:20px 42px;">
-                    Solicitar revisión gratuita →
+    <section class="max-w-5xl mx-auto px-6 pt-20 pb-16 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h1 class="text-5xl md:text-6xl font-bold tracking-tighter leading-tight">
+                Automatizaciones para clínicas que <span class="accent">sí funcionan</span>
+            </h1>
+            <p class="mt-6 text-xl text-gray-400 max-w-2xl mx-auto">
+                Reducimos tareas manuales en clínicas y centros médicos combinando <strong>Python e Inteligencia Artificial</strong> de forma inteligente y estable.
+            </p>
+            
+            <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contacto" class="px-8 py-4 bg-[#00D4FF] text-[#0A0A0A] font-semibold rounded-xl text-lg hover:bg-white transition-colors">
+                    Reservar llamada de 15 minutos
+                </a>
+                <a href="#como-funciona" class="px-8 py-4 border border-gray-700 hover:bg-gray-900 rounded-xl text-lg font-medium transition-colors">
+                    Ver cómo funciona
                 </a>
             </div>
-            <div class="terminal" style="font-size:1.1rem;">
-                &gt; Nexus Sentinel v1.2 iniciado...<br>
-                &gt; [ALERT] API mal configurada detectada<br>
-                &gt; [CRÍTICO] Riesgo de cumplimiento identificado<br>
-                &gt; NODO BLINDADO • INTEGRIDAD ACTIVADA
-            </div>
         </div>
     </section>
 
-    <!-- NIS2 -->
-    <section id="nis2" class="section" style="background:#111;">
-        <div class="container">
-            <h2 style="text-align:center;font-size:2.4rem;margin-bottom:40px;">España 2026: NIS2 ya es ley</h2>
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;">
-                <div class="card">
-                    <h3 style="color:#6366f1;">Multas reales</h3>
-                    <p style="font-size:2.6rem;font-weight:bold;">Hasta 10 millones €</p>
-                    <p>o el 2% de tu facturación global anual.</p>
-                </div>
-                <div class="card">
-                    <h3 style="color:#6366f1;">APIs mal configuradas</h3>
-                    <p>Uno de los vectores más comunes de brechas de seguridad en España actualmente.</p>
-                </div>
-                <div class="card">
-                    <h3 style="color:#6366f1;">Tu situación actual</h3>
-                    <p>Las inspecciones ya están en marcha. Estar preparado es una ventaja competitiva.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TESTER IA -->
-    <section id="tester-ia" class="section" style="background:#0f0f17;">
-        <div class="container">
-            <div style="text-align:center;margin-bottom:50px;">
-                <span style="background:#6366f1;color:white;padding:8px 24px;border-radius:9999px;font-weight:700;">ÚNICO EN EL MERCADO</span>
-                <h2 style="font-size:2.5rem;margin:20px 0;">Tester de IA por Prompts</h2>
-            </div>
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px;">
-                <div class="card">
-                    <i class="fas fa-robot" style="font-size:3rem;color:#6366f1;display:block;margin-bottom:15px;"></i>
-                    <h3>Prompt Injection Testing</h3>
-                    <p>Simulamos ataques reales contra tus sistemas de inteligencia artificial.</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-shield-alt" style="font-size:3rem;color:#6366f1;display:block;margin-bottom:15px;"></i>
-                    <h3>Jailbreak &amp; Red Teaming</h3>
-                    <p>Metodología propia combinada con múltiples vectores para encontrar fallos ocultos.</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-chart-line" style="font-size:3rem;color:#6366f1;display:block;margin-bottom:15px;"></i>
-                    <h3>Reporte Ejecutivo + Remediación</h3>
-                    <p>Informe claro con plan de acción concreto. Entrega en 24-48h.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SERVICIOS -->
-    <section id="servicios" class="section">
-        <div class="container">
-            <h2 style="text-align:center;font-size:2.4rem;margin-bottom:40px;">Servicios de Blindaje</h2>
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;">
-                <div class="card">
-                    <i class="fas fa-fingerprint" style="font-size:2.5rem;color:#6366f1;"></i>
-                    <h3>Auditoría Técnica Completa</h3>
-                    <p style="font-size:2rem;font-weight:bold;">497€</p>
-                    <p>Una sola auditoría • Informe detallado en 24h</p>
-                </div>
-                <div class="card" style="border-color:#6366f1;position:relative;">
-                    <div style="position:absolute;top:-12px;right:20px;background:#6366f1;color:white;padding:4px 14px;border-radius:9999px;font-size:0.8rem;font-weight:700;">MÁS SOLICITADO</div>
-                    <i class="fas fa-vault" style="font-size:2.5rem;color:#6366f1;"></i>
-                    <h3>Hardening Pack</h3>
-                    <p style="font-size:2rem;font-weight:bold;">297€ <span style="font-size:1rem;">/mes</span></p>
-                    <p>Blindaje continuo y mantenimiento de seguridad</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-satellite-dish" style="font-size:2.5rem;color:#6366f1;"></i>
-                    <h3>Nexus Shield</h3>
-                    <p style="font-size:2rem;font-weight:bold;">497€ <span style="font-size:1rem;">/mes</span></p>
-                    <p>Monitoreo proactivo y respuesta a incidentes</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-user-lock" style="font-size:2.5rem;color:#6366f1;"></i>
-                    <h3>Protocolo Zero-Trust</h3>
-                    <p style="font-size:2rem;font-weight:bold;">997€ <span style="font-size:1rem;">/mes</span></p>
-                    <p>Cabeceras avanzadas + protección de IA</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SENTINEL -->
-    <section id="sentinel" class="section" style="background:#0f0f17;">
-        <div class="container">
-            <h2 style="text-align:center;font-size:2.4rem;margin-bottom:40px;"><i class="fas fa-terminal"></i> Nexus Sentinel Intelligence</h2>
-            <div class="terminal" style="max-width:800px;margin:0 auto;font-size:1.1rem;">
-                &gt; Initializing Nexus Sentinel Scan..<br>
-                &gt; Checking Security Headers...<br>
-                &gt; [ALERT] Missing X-Frame-Options<br>
-                &gt; Success. Node Secured.
-            </div>
-        </div>
-    </section>
-
-    <!-- ARSENAL TÁCTICO GRATUITO -->
-    <section id="arsenal" class="section" style="background:#111;">
-        <div class="container">
-            <h2 style="text-align:center;font-size:2.4rem;margin-bottom:40px;"><i class="fas fa-box-open"></i> Arsenal Táctico Gratuito</h2>
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:20px;">
-                
-                <div class="card">
-                    <i class="fas fa-search-location" style="font-size:2.5rem;color:#6366f1;"></i>
-                    <h3>Nexus Header Scanner</h3>
-                    <p>Evalúa en segundos la resistencia de tu servidor contra Clickjacking, MIME Sniffing y ataques MITM.</p>
-                    <a href="https://github.com/forkaizen2023-sys/Nexus-Header-Scanner" target="_blank" 
-                       style="display:inline-flex;align-items:center;gap:8px;background:#6366f1;color:white;padding:12px 24px;border-radius:8px;margin-top:20px;text-decoration:none;font-weight:700;">
-                        Descargar Script <i class="fab fa-github"></i>
-                    </a>
-                </div>
-
-                <div class="card">
-                    <i class="fas fa-network-wired" style="font-size:2.5rem;color:#6366f1;"></i>
-                    <h3>Nexus OSINT Recon</h3>
-                    <p>Descubre subdominios olvidados o expuestos consultando registros de Transparencia de Certificados.</p>
-                    <a href="https://github.com/forkaizen2023-sys/Nexus-OSINT-Recon" target="_blank" 
-                       style="display:inline-flex;align-items:center;gap:8px;background:#6366f1;color:white;padding:12px 24px;border-radius:8px;margin-top:20px;text-decoration:none;font-weight:700;">
-                        Descargar Script <i class="fab fa-github"></i>
-                    </a>
-                </div>
-
-                <!-- GitCare -->
-                <div class="card">
-                    <i class="fas fa-shield-alt" style="font-size:2.5rem;color:#6366f1;"></i>
-                    <h3>GitCare - Extensión VS Code</h3>
-                    <p>Mi primera herramienta. Protege a desarrolladores (especialmente juniors) de subir código por error a Git con confirmaciones inteligentes y bloqueos de seguridad.</p>
-                    <a href="https://marketplace.visualstudio.com/items?itemName=forkaizen.gitcare" target="_blank" 
-                       style="display:inline-flex;align-items:center;gap:8px;background:#6366f1;color:white;padding:12px 24px;border-radius:8px;margin-top:20px;text-decoration:none;font-weight:700;">
-                        Instalar en VS Code <i class="fas fa-download"></i>
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- FORMULARIO CON HONEYPOT -->
-    <section id="contacto" class="section" style="background:#0a0a0f; padding: 100px 20px;">
-        <div class="container" style="max-width: 620px; margin: 0 auto;">
+    <!-- PROBLEMA -->
+    <section class="max-w-5xl mx-auto px-6 py-16 border-t border-gray-800">
+        <div class="max-w-3xl">
+            <h2 class="section-title">Las clínicas pierden tiempo y pacientes por procesos manuales</h2>
             
-            <div style="text-align:center; margin-bottom:40px;">
-                <h2 style="color:#fff; font-size:2.3rem;">¿Quieres proteger tu infraestructura?</h2>
-                <p style="color:#94a3b8; font-size:1.2rem;">Hablemos. La primera revisión es gratuita.</p>
+            <div class="mt-8 grid md:grid-cols-3 gap-6">
+                <div class="card p-6 rounded-2xl border border-gray-800">
+                    <i class="fa-solid fa-clock text-3xl accent mb-4"></i>
+                    <h3 class="font-semibold text-lg">Tareas repetitivas</h3>
+                    <p class="text-gray-400 mt-2">Confirmar citas, enviar recordatorios y hacer seguimientos manualmente consume muchas horas del equipo.</p>
+                </div>
+                <div class="card p-6 rounded-2xl border border-gray-800">
+                    <i class="fa-solid fa-user-clock text-3xl accent mb-4"></i>
+                    <h3 class="font-semibold text-lg">Pérdida de pacientes</h3>
+                    <p class="text-gray-400 mt-2">Muchos pacientes contactan fuera de horario y terminan yéndose a otras clínicas.</p>
+                </div>
+                <div class="card p-6 rounded-2xl border border-gray-800">
+                    <i class="fa-solid fa-exclamation-triangle text-3xl accent mb-4"></i>
+                    <h3 class="font-semibold text-lg">Automatizaciones inestables</h3>
+                    <p class="text-gray-400 mt-2">Muchas soluciones solo con IA fallan frecuentemente y generan más problemas que soluciones.</p>
+                </div>
             </div>
-
-            <div style="background:#111118; border:1px solid #1f1f2e; border-radius:16px; padding:40px;">
-                <form action="https://formspree.io/f/mwvrdeyw" method="POST">
-                    
-                    <!-- HONEYPOT (Campo invisible para bots) -->
-                    <div style="position:absolute; left:-9999px; top:-9999px; opacity:0; pointer-events:none;">
-                        <label for="website">Website (no rellenar)</label>
-                        <input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off">
-                    </div>
-
-                    <div>
-                        <label style="display:block; margin-bottom:8px; font-weight:600; color:#cbd5e1;">Nombre</label>
-                        <input type="text" name="nombre" required class="form-input">
-                    </div>
-
-                    <div>
-                        <label style="display:block; margin-bottom:8px; font-weight:600; color:#cbd5e1;">Email corporativo</label>
-                        <input type="email" name="email" required class="form-input">
-                    </div>
-
-                    <div>
-                        <label style="display:block; margin-bottom:8px; font-weight:600; color:#cbd5e1;">¿Qué necesitas?</label>
-                        <select name="necesidad" required class="form-input">
-                            <option value="">Selecciona una opción...</option>
-                            <option value="auditoria">Auditoría de infraestructura</option>
-                            <option value="hardening">Hardening / Blindaje continuo</option>
-                            <option value="ia">Tester de IA por Prompts</option>
-                            <option value="nis2">Cumplimiento NIS2</option>
-                            <option value="otro">Otra consulta</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label style="display:block; margin-bottom:8px; font-weight:600; color:#cbd5e1;">Mensaje (opcional)</label>
-                        <textarea name="mensaje" rows="4" placeholder="Cuéntame brevemente qué te preocupa..." 
-                                  style="width:100%; padding:14px; background:#15151e; border:1px solid #334155; border-radius:8px; color:#fff; font-size:1rem; resize:vertical;"></textarea>
-                    </div>
-
-                    <button type="submit" 
-                            style="width:100%; padding:18px; background:#6366f1; color:white; border:none; border-radius:9999px; font-size:1.15rem; font-weight:700; cursor:pointer; margin-top:10px;">
-                        Enviar mensaje
-                    </button>
-                </form>
-            </div>
-
-            <!-- TEXTO DE PRIVACIDAD -->
-            <div style="margin-top:30px; padding:20px; background:#111118; border:1px solid #1f1f2e; border-radius:12px; font-size:0.95rem; color:#94a3b8;">
-                <p style="margin:0 0 10px 0;">
-                    <strong>Privacidad:</strong> Tus datos serán tratados de forma confidencial y solo se utilizarán para responder a tu consulta. 
-                    No compartimos tu información con terceros.
-                </p>
-                <p style="margin:0;">
-                    Para más información, escríbenos directamente a: 
-                    <a href="mailto:david@nexusdigital.pro" style="color:#6366f1; text-decoration:none; font-weight:600;">david@nexusdigital.pro</a>
-                </p>
-            </div>
-
         </div>
     </section>
 
-    <footer style="text-align:center;padding:60px 20px;background:#0a0a0f;border-top:1px solid #1f1f2e;">
-        <p>&copy; 2026 NEXUS DIGITAL | Seguridad Garantizada por Diseño.</p>
-        <p style="color:#64748b; font-size:0.9rem;">STATUS: PROTECTED BY SENTINEL_ENGINE_V1.2</p>
+    <!-- SOLUCIÓN -->
+    <section id="solucion" class="max-w-5xl mx-auto px-6 py-16 border-t border-gray-800">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="section-title">Automatizaciones inteligentes con Python + IA</h2>
+                <p class="mt-6 text-lg text-gray-400">
+                    Diseñamos sistemas que combinan lo mejor de dos mundos: estabilidad del código tradicional y potencia de la Inteligencia Artificial.
+                </p>
+                <ul class="mt-6 space-y-3 text-gray-300">
+                    <li class="flex gap-x-3"><i class="fa-solid fa-check mt-1.5 accent"></i> Usamos Python cuando se necesita fiabilidad y velocidad</li>
+                    <li class="flex gap-x-3"><i class="fa-solid fa-check mt-1.5 accent"></i> Aplicamos IA solo donde realmente genera valor</li>
+                    <li class="flex gap-x-3"><i class="fa-solid fa-check mt-1.5 accent"></i> Creamos sistemas fáciles de mantener a largo plazo</li>
+                </ul>
+            </div>
+            <div class="card p-8 rounded-3xl border border-gray-800">
+                <p class="text-gray-400 mb-4">Resultados habituales:</p>
+                <div class="space-y-5">
+                    <div>
+                        <div class="flex justify-between text-sm mb-1.5"><span>Reducción de tareas manuales</span><span class="font-semibold">60-80%</span></div>
+                        <div class="h-2 bg-gray-800 rounded-full"><div class="h-2 w-[75%] bg-[#00D4FF] rounded-full"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-1.5"><span>Ahorro de tiempo semanal del equipo</span><span class="font-semibold">15-30 horas</span></div>
+                        <div class="h-2 bg-gray-800 rounded-full"><div class="h-2 w-[65%] bg-[#00D4FF] rounded-full"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CÓMO FUNCIONA -->
+    <section id="como-funciona" class="max-w-5xl mx-auto px-6 py-16 border-t border-gray-800">
+        <h2 class="section-title text-center mb-12">Un proceso claro y profesional</h2>
+        
+        <div class="grid md:grid-cols-4 gap-6">
+            <div class="text-center">
+                <div class="w-14 h-14 mx-auto bg-[#161616] border border-gray-700 rounded-2xl flex items-center justify-center text-2xl font-bold accent">1</div>
+                <h4 class="mt-5 font-semibold">Análisis de procesos</h4>
+                <p class="text-sm text-gray-400 mt-2">Revisamos cómo trabaja tu clínica y detectamos las mejores oportunidades de automatización.</p>
+            </div>
+            <div class="text-center">
+                <div class="w-14 h-14 mx-auto bg-[#161616] border border-gray-700 rounded-2xl flex items-center justify-center text-2xl font-bold accent">2</div>
+                <h4 class="mt-5 font-semibold">Propuesta personalizada</h4>
+                <p class="text-sm text-gray-400 mt-2">Te presentamos las soluciones más adecuadas según tu volumen de pacientes y flujo de trabajo.</p>
+            </div>
+            <div class="text-center">
+                <div class="w-14 h-14 mx-auto bg-[#161616] border border-gray-700 rounded-2xl flex items-center justify-center text-2xl font-bold accent">3</div>
+                <h4 class="mt-5 font-semibold">Desarrollo a medida</h4>
+                <p class="text-sm text-gray-400 mt-2">Construimos la automatización combinando Python e Inteligencia Artificial.</p>
+            </div>
+            <div class="text-center">
+                <div class="w-14 h-14 mx-auto bg-[#161616] border border-gray-700 rounded-2xl flex items-center justify-center text-2xl font-bold accent">4</div>
+                <h4 class="mt-5 font-semibold">Entrega y soporte</h4>
+                <p class="text-sm text-gray-400 mt-2">Te entregamos el sistema funcionando junto con soporte y formación.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAQUETES -->
+    <section id="paquetes" class="max-w-6xl mx-auto px-6 py-16 border-t border-gray-800">
+        <div class="text-center mb-12">
+            <h2 class="section-title">Soluciones adaptadas a tu clínica</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- Básico -->
+            <div class="card border border-gray-700 rounded-3xl p-8">
+                <h3 class="font-semibold text-xl">Automatización Básica</h3>
+                <p class="text-4xl font-bold mt-4">750€</p>
+                <p class="text-sm text-gray-500">Pago único</p>
+                <ul class="mt-8 space-y-3 text-sm">
+                    <li class="flex gap-x-3"><i class="fa-solid fa-check accent mt-1"></i> Automatización de 1 proceso</li>
+                    <li class="flex gap-x-3"><i class="fa-solid fa-check accent mt-1"></i> Código limpio y documentado</li>
+                    <li class="flex gap-x-3"><i class="fa-solid fa-check accent mt-1"></i> 30 días de soporte</li>
+                </ul>
+                <a href="#contacto" class="mt-8 block text-center py-3 border border-gray-600 hover:bg-gray-900 rounded-xl font-medium">Elegir este plan</a>
+            </div>
+
+            <!-- Dashboard -->
+            <div class="card border border-[#00D4FF] rounded-3xl p-8 relative">
+                <div class="absolute -top-3 right-6 bg-[#00D4FF] text-[#0A0A0A] text-xs font-bold px-4 py-1 rounded-full">RECOMENDADO</div>
+                <h3 class="font-semibold text-xl">Automatización + Dashboard</h3>
+                <p class="text-4xl font-bold mt-4">1.450€</p>
+                <p class="text-sm text-gray-500">Pago único</p>
+                <ul class="mt-8 space-y-3 text-sm">
+                    <li class="flex gap-x-3"><i class="fa-solid fa-check accent mt-1"></i> Automatización de 1-2 procesos</li>
+                    <li class="flex gap-x-3"><i class="fa-solid fa-check accent mt-1"></i> Dashboard visual para seguimiento</li>
+                    <li class="flex gap-x-3"><i class="fa-solid fa-check accent mt-1"></i> 45 días de soporte</li>
+                </ul>
+                <a href="#contacto" class="mt-8 block text-center py-3 bg-[#00D4FF] text-[#0A0A0A] font-semibold rounded-xl">Elegir este plan</a>
+            </div>
+
+            <!-- Inteligente -->
+            <div class="card border border-gray-700 rounded-3xl p-8">
+                <h3 class="font-semibold text-xl">Automatización Inteligente</h3>
+                <p class="text-4xl font-bold mt-4">2.350€</p>
+                <p class="text-sm text-gray-500">Pago único</p>
+                <ul class="mt-8 space-y-3 text-sm">
+                    <li class="flex gap-x-3"><i class="fa-solid fa-check accent mt-1"></i> Automatización avanzada</li>
+                    <li class="flex gap-x-3"><i class="fa-solid fa-check accent mt-1"></i> IA + Python combinados</li>
+                    <li class="flex gap-x-3"><i class="fa-solid fa-check accent mt-1"></i> Dashboard + alertas automáticas</li>
+                    <li class="flex gap-x-3"><i class="fa-solid fa-check accent mt-1"></i> 60 días de soporte</li>
+                </ul>
+                <a href="#contacto" class="mt-8 block text-center py-3 border border-gray-600 hover:bg-gray-900 rounded-xl font-medium">Elegir este plan</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="max-w-4xl mx-auto px-6 py-20 text-center border-t border-gray-800">
+        <h2 class="text-4xl font-bold tracking-tight">¿Quieres reducir la carga manual en tu clínica?</h2>
+        <p class="mt-4 text-xl text-gray-400">Agenda una llamada de 15 minutos y te ayudaremos a identificar las mejores oportunidades de automatización.</p>
+
+        <div class="mt-10">
+            <a href="mailto:david@nexusdigital.pro" class="inline-block px-10 py-4 bg-[#00D4FF] text-[#0A0A0A] font-semibold text-lg rounded-2xl hover:bg-white transition-colors">
+                Reservar llamada de 15 minutos
+            </a>
+            
+            <div class="mt-6 text-sm text-gray-400">
+                O escríbenos a: <a href="mailto:david@nexusdigital.pro" class="text-[#00D4FF] hover:underline">david@nexusdigital.pro</a>
+            </div>
+            <div class="mt-2 text-sm text-gray-500">
+                Teléfono: <span class="text-gray-400">[Tu número profesional aquí]</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schema.org Avanzado -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Nexus Digital",
+      "description": "Especialistas en automatizaciones inteligentes para clínicas y centros médicos. Combinamos Python e Inteligencia Artificial para reducir tareas manuales y mejorar la atención al paciente.",
+      "url": "https://www.nexusdigital.pro",
+      "email": "david@nexusdigital.pro",
+      "areaServed": {
+        "@type": "Country",
+        "name": "España"
+      },
+      "serviceType": "Automatizaciones con Python e Inteligencia Artificial",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Paquetes de Automatización para Clínicas",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Automatización Básica"
+            },
+            "price": "750",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Automatización con Dashboard"
+            },
+            "price": "1450",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Automatización Inteligente"
+            },
+            "price": "2350",
+            "priceCurrency": "EUR"
+          }
+        ]
+      }
+    }
+    </script>
+
+    <footer class="border-t border-gray-800 py-8 text-center text-sm text-gray-500">
+        © Nexus Digital — Automatizaciones que funcionan
     </footer>
 
 </body>
