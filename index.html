@@ -3,6 +3,366 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatizaciones para Clínicas | Nexus Digital</title>
+    <meta name="description" content="Automatizamos procesos en clínicas y centros médicos combinando Python e Inteligencia Artificial. Reduce tareas manuales y crea sistemas estables.">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        body {
+            background-color: #0A0A0A;
+            color: #EAEAEA;
+            font-family: system-ui, -apple-system, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .nav {
+            background-color: #0A0A0A;
+            border-bottom: 1px solid #333;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        .logo-dot {
+            width: 36px;
+            height: 36px;
+            background-color: #00D4FF;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0A0A0A;
+            font-weight: bold;
+            font-size: 22px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 32px;
+        }
+        .nav-links a {
+            color: #EAEAEA;
+            text-decoration: none;
+        }
+        .nav-links a:hover {
+            color: #00D4FF;
+        }
+        .btn {
+            background-color: #00D4FF;
+            color: #0A0A0A;
+            padding: 12px 24px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background-color: white;
+        }
+        .hero {
+            text-align: center;
+            padding: 80px 0;
+        }
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+        .accent {
+            color: #00D4FF;
+        }
+        .section {
+            padding: 80px 0;
+            border-top: 1px solid #333;
+        }
+        .section-title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+        .card {
+            background-color: #161616;
+            padding: 32px;
+            border-radius: 20px;
+            border: 1px solid #333;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+        }
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+        }
+        .step {
+            text-align: center;
+        }
+        .step-number {
+            width: 56px;
+            height: 56px;
+            background-color: #161616;
+            border: 1px solid #444;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #00D4FF;
+            margin: 0 auto 20px;
+        }
+        .package {
+            background-color: #161616;
+            padding: 32px;
+            border-radius: 24px;
+            border: 1px solid #333;
+        }
+        .package.popular {
+            border: 2px solid #00D4FF;
+            position: relative;
+        }
+        .badge {
+            position: absolute;
+            top: -12px;
+            right: 24px;
+            background-color: #00D4FF;
+            color: #0A0A0A;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 4px 16px;
+            border-radius: 20px;
+        }
+        .price {
+            font-size: 42px;
+            font-weight: 700;
+            margin: 16px 0;
+        }
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid #333;
+            color: #888;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="nav">
+        <div class="container nav-content">
+            <div class="logo">
+                <div class="logo-dot">N</div>
+                <span>Nexus Digital</span>
+            </div>
+            
+            <div class="nav-links">
+                <a href="#solucion">Solución</a>
+                <a href="#como-funciona">Cómo funciona</a>
+                <a href="#paquetes">Paquetes</a>
+            </div>
+
+            <a href="#contacto" class="btn">Reservar llamada</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="container hero">
+        <h1>Automatizaciones para clínicas<br>que <span class="accent">sí funcionan</span></h1>
+        <p style="max-width: 620px; margin: 0 auto; font-size: 20px; color: #aaa;">
+            Reducimos tareas manuales en clínicas y centros médicos combinando Python e Inteligencia Artificial de forma inteligente y estable.
+        </p>
+        
+        <div style="margin-top: 40px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+            <a href="#contacto" class="btn" style="padding: 16px 32px; font-size: 18px;">Reservar llamada de 15 minutos</a>
+            <a href="#como-funciona" style="padding: 16px 32px; font-size: 18px; border: 1px solid #444; border-radius: 12px; text-decoration: none; color: #EAEAEA;">Ver cómo funciona</a>
+        </div>
+    </section>
+
+    <!-- PROBLEMA -->
+    <section class="container section">
+        <h2 class="section-title">Las clínicas pierden tiempo y pacientes por procesos manuales</h2>
+        
+        <div class="grid-3">
+            <div class="card">
+                <i class="fa-solid fa-clock" style="font-size: 32px; color: #00D4FF; margin-bottom: 16px;"></i>
+                <h3>Tareas repetitivas</h3>
+                <p style="color: #aaa; margin-top: 12px;">Confirmar citas, enviar recordatorios y hacer seguimientos manualmente consume muchas horas del equipo.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-user-clock" style="font-size: 32px; color: #00D4FF; margin-bottom: 16px;"></i>
+                <h3>Pérdida de pacientes</h3>
+                <p style="color: #aaa; margin-top: 12px;">Muchos pacientes contactan fuera de horario y terminan yéndose a otras clínicas.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-exclamation-triangle" style="font-size: 32px; color: #00D4FF; margin-bottom: 16px;"></i>
+                <h3>Automatizaciones inestables</h3>
+                <p style="color: #aaa; margin-top: 12px;">Muchas soluciones solo con IA fallan frecuentemente y generan más problemas que soluciones.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUCIÓN -->
+    <section id="solucion" class="container section">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+            <div>
+                <h2 class="section-title">Automatizaciones inteligentes con Python + IA</h2>
+                <p style="font-size: 18px; color: #aaa;">
+                    Diseñamos sistemas que combinan lo mejor de dos mundos: estabilidad del código tradicional y potencia de la Inteligencia Artificial.
+                </p>
+            </div>
+            <div class="card">
+                <p style="color: #aaa; margin-bottom: 20px;">Resultados habituales:</p>
+                <div style="margin-bottom: 24px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                        <span>Reducción de tareas manuales</span>
+                        <span style="font-weight: 600;">60-80%</span>
+                    </div>
+                    <div style="height: 8px; background: #333; border-radius: 999px;">
+                        <div style="width: 75%; height: 8px; background: #00D4FF; border-radius: 999px;"></div>
+                    </div>
+                </div>
+                <div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                        <span>Ahorro de tiempo semanal</span>
+                        <span style="font-weight: 600;">15-30 horas</span>
+                    </div>
+                    <div style="height: 8px; background: #333; border-radius: 999px;">
+                        <div style="width: 65%; height: 8px; background: #00D4FF; border-radius: 999px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CÓMO FUNCIONA -->
+    <section id="como-funciona" class="container section">
+        <h2 class="section-title" style="text-align: center;">Un proceso claro y profesional</h2>
+        
+        <div class="grid-4">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h4>Análisis de procesos</h4>
+                <p style="color: #aaa; font-size: 14px;">Revisamos cómo trabaja tu clínica y detectamos las mejores oportunidades.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h4>Propuesta personalizada</h4>
+                <p style="color: #aaa; font-size: 14px;">Te presentamos las soluciones más adecuadas según tu operación.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h4>Desarrollo a medida</h4>
+                <p style="color: #aaa; font-size: 14px;">Construimos la automatización combinando Python e IA.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h4>Entrega y soporte</h4>
+                <p style="color: #aaa; font-size: 14px;">Te entregamos el sistema funcionando con soporte posterior.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAQUETES -->
+    <section id="paquetes" class="container section">
+        <h2 class="section-title" style="text-align: center;">Soluciones adaptadas a tu clínica</h2>
+        
+        <div class="grid-3">
+            <!-- Básico -->
+            <div class="package">
+                <h3>Automatización Básica</h3>
+                <div class="price">750€</div>
+                <p style="color: #888;">Pago único</p>
+                <ul style="margin: 32px 0; padding-left: 20px; line-height: 2;">
+                    <li>Automatización de 1 proceso</li>
+                    <li>Código limpio y documentado</li>
+                    <li>30 días de soporte</li>
+                </ul>
+                <a href="#contacto" class="btn" style="display: block; text-align: center;">Elegir este plan</a>
+            </div>
+
+            <!-- Popular -->
+            <div class="package popular">
+                <div class="badge">RECOMENDADO</div>
+                <h3>Automatización + Dashboard</h3>
+                <div class="price">1.450€</div>
+                <p style="color: #888;">Pago único</p>
+                <ul style="margin: 32px 0; padding-left: 20px; line-height: 2;">
+                    <li>Automatización de 1-2 procesos</li>
+                    <li>Dashboard visual para seguimiento</li>
+                    <li>45 días de soporte</li>
+                </ul>
+                <a href="#contacto" class="btn" style="display: block; text-align: center; background: #00D4FF; color: #0A0A0A;">Elegir este plan</a>
+            </div>
+
+            <!-- Avanzado -->
+            <div class="package">
+                <h3>Automatización Inteligente</h3>
+                <div class="price">2.350€</div>
+                <p style="color: #888;">Pago único</p>
+                <ul style="margin: 32px 0; padding-left: 20px; line-height: 2;">
+                    <li>Automatización avanzada</li>
+                    <li>IA + Python combinados</li>
+                    <li>Dashboard + alertas automáticas</li>
+                    <li>60 días de soporte</li>
+                </ul>
+                <a href="#contacto" class="btn" style="display: block; text-align: center;">Elegir este plan</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="container section" style="text-align: center; max-width: 700px;">
+        <h2 style="font-size: 36px; font-weight: 700;">¿Quieres reducir la carga manual en tu clínica?</h2>
+        <p style="font-size: 20px; color: #aaa; margin-top: 16px;">Agenda una llamada de 15 minutos y te ayudaremos a identificar las mejores oportunidades de automatización.</p>
+        
+        <a href="mailto:david@nexusdigital.pro" class="btn" style="margin-top: 40px; padding: 18px 40px; font-size: 18px; display: inline-block;">
+            Reservar llamada de 15 minutos
+        </a>
+        
+        <div style="margin-top: 32px; color: #888;">
+            O escríbenos a: <a href="mailto:david@nexusdigital.pro" style="color: #00D4FF;">david@nexusdigital.pro</a>
+        </div>
+        <div style="margin-top: 8px; color: #666;">
+            Teléfono: <span style="color: #aaa;">[Tu número profesional aquí]</span>
+        </div>
+    </section>
+
+    <footer class="footer">
+        © Nexus Digital — Automatizaciones que funcionan
+    </footer>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Automatizaciones para Clínicas | Nexus Digital</title>
     <meta name="description" content="Automatizamos procesos en clínicas y centros médicos combinando Python e Inteligencia Artificial. Reduce tareas manuales y crea sistemas estables.">
